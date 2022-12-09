@@ -2,74 +2,128 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Frontend Mentor | News homepage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Frontend Mentor | News homepage</title>
 </head>
 
 <body>
-  <div class="container">
-    <input type="checkbox" name="check-menu" id="check-menu" class="check-menu" checked="True">
-    <div class="bg-dar-transparent"></div>
-    <div class="menu">
-      <img class="menu-logo" src="assets/images/logo.svg" alt="Logo">
-      <label for="check-menu" class="check-menu_label">
-        <!-- <img src="assets/images/icon-menu.svg" alt="Botão menu"> -->
-      </label>
-      <div class="menu-list-position">
-        <ul class="menu-list">
-          <li class="menu-list_item"><a href="#">Home</a></li>
-          <li class="menu-list_item"><a href="#">New</a></li>
-          <li class="menu-list_item"><a href="#">Popular</a></li>
-          <li class="menu-list_item"><a href="#">Trending</a></li>
-          <li class="menu-list_item"><a href="#">Categories</a></li>
-        </ul>
-      </div>
+    <div class="container">
+        <input type="checkbox" name="check-menu" id="check-menu" class="check-menu">
+        <div class="bg-dar-transparent"></div>
+        <div class="menu">
+            <img class="menu-logo" src="assets/images/logo.svg" alt="Logo">
+            <label for="check-menu" class="check-menu_label">
+            </label>
+            <div class="menu-list-position">
+                <ul class="menu-list">
+                    <li class="menu-list_item"><a href="#">Home</a></li>
+                    <li class="menu-list_item"><a href="#">New</a></li>
+                    <li class="menu-list_item"><a href="#">Popular</a></li>
+                    <li class="menu-list_item"><a href="#">Trending</a></li>
+                    <li class="menu-list_item"><a href="#">Categories</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-body flex">
+
+            <div class="content-main flex">
+                <main class="principal">
+                    <section class="principal-section">
+                        <div class="principal-image">
+                            <!-- Imagem aqui -->
+                        </div>
+                        <header class="principal-title">
+                            <h2>
+                                The Bright Future of Web 3.0?
+                            </h2>
+                        </header>
+                        <div class="text-btn flex">
+                            <p>
+                                We dive into the next evolution of the web that claims to put the power of the platforms
+                                back
+                                into the hands of the
+                                people.
+                                But is it really fulfilling its promise?
+                            </p>
+                            <div class="btn">
+                                <a href="#">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <aside class="side-bar">
+                    <h3>
+                        New
+                    </h3>
+                    <ul class="side-bar_list flex">
+                        <li class="side-bar_list-item">
+                            <a href="#"><h4>Hydrogen VS Electric Cars</h4></a>
+                            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        </li>
+                        <div class="line"></div>
+                        <li class="side-bar_list-item">
+                            <a href="#"><h4>The Downsides of AI Artistry</h4></a>
+                            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                        </li>
+                        <div class="line"></div>
+                        <li class="side-bar_list-item">
+                            <a href="#"><h4>Is VC Funding Drying Up?</h4></a>
+                            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="content-bottom">
+                <ul class="content-bottom_list flex">
+                    <li class="content-bottom_list-item">
+                        <h4>01</h4>
+                        <a href="#">
+                            <h5>Reviving Retro PCs</h5>
+                        </a>
+                        <p>
+                            What happens when old PCs are given modern upgrades?
+                        </p>
+                    </li>
+                    <li class="content-bottom_list-item">
+                        <h4>02</h4>
+                        <a href="#">
+                            <h5>Top 10 Laptops of 2022</h5>
+                        </a>
+                        <p>
+                            Our best picks for various needs and budgets.
+                        </p>
+                    </li>
+                    <li class="content-bottom_list-item">
+                        <h4>03</h4>
+                        <a href="#">
+                            <h5>The Growth of Gaming</h5>
+                        </a>
+                        <p>
+                            How the pandemic has sparked fresh opportunities.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    The Bright Future of Web 3.0?
-
-    We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
-    people.
-    But is it really fulfilling its promise?
-  
-    Read more
-  
-    New
-  
-    Hydrogen VS Electric Cars
-    Will hydrogen-fueled cars ever catch up to EVs?
-  
-    The Downsides of AI Artistry
-    What are the possible adverse effects of on-demand AI image generation?
-  
-    Is VC Funding Drying Up?
-    Private funding by VC firms is down 50% YOY. We take a look at what that means.
-  
-    01
-    Reviving Retro PCs
-    What happens when old PCs are given modern upgrades?
-  
-    02
-    Top 10 Laptops of 2022
-    Our best picks for various needs and budgets.
-  
-    03
-    The Growth of Gaming
-    How the pandemic has sparked fresh opportunities.
-  </div>
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div>
 </body>
 
 </html>

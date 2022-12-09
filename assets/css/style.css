@@ -1,3 +1,11 @@
+:root{
+    --color-dark-blue: hsl(240, 100%, 5%);
+    --color-white: hsl(36, 100%, 99%);
+    --color-grey:  hsl(236, 13%, 42%);
+    --color-red: hsl(5, 85%, 63%);
+    --color-orange: hsl(35, 77%, 62%);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -20,9 +28,14 @@ ul li{
     list-style: none;
 }
 
-/*---------CONTAINER---------*/
+
+/*---------GENERIC CLASSES---------*/
 .container{
     padding: 2rem;
+}
+
+.flex{
+    display: flex;
 }
 
 /*---------MENU---------*/
@@ -34,7 +47,7 @@ ul li{
 }
 
 .bg-dar-transparent{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     min-width: 100vw;
@@ -55,19 +68,20 @@ ul li{
 }
 
 .menu-list-position{
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
     min-width: 65vw;
-    background-color: hsl(36, 100%, 99%);
+    background-color: var(--color-white);
     display: none;
 }
 
 .check-menu_label::after{
     content: url("../images/icon-menu.svg");
-    position: relative;
-    right: 0;
+    position: absolute;
+    top: 3rem;
+    right: 2.05rem;
     z-index: 3;
 }
 
@@ -82,7 +96,7 @@ ul li{
 }
 
 .menu-list_item a{
-    color: hsl(240, 100%, 5%);
+    color: var(--color-dark-blue);
     font-size: 15px;
 }
 
@@ -93,10 +107,132 @@ ul li{
 .check-menu:checked~.bg-dar-transparent{
     display: block;
 }
+.check-menu:checked~.menu .check-menu_label::after{
+    position: fixed;
+}
 
 .check-menu:checked~.menu .check-menu_label::after{
     content: url("../images/icon-menu-close.svg");
 }
+
+/*--------- CONTENT BODY ----------*/
+
+.content-body{
+    flex-direction: column;
+}
+/*--------- CONTENT MAIN ----------*/
+
+.content-main{
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/*-----PRINCIPAL---------*/
+
+/* PRINCIPAL SECTION */
+.principal-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/*PRINCIPAL IMAGE*/
+
+.principal-image{
+    min-width: 100%;
+    min-height: 30rem;
+    background-image: url("../images/image-web-3-mobile.jpg") ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* margin-bottom: 2rem; */
+}
+
+/*PRINCIPAL TITLE*/
+
+.principal-title h2{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4rem;
+    color: var(--color-dark-blue);
+}
+
+/*TEXT BTN */
+
+.text-btn{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text-btn p{
+    color: var(--color-grey);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.text-btn .btn{
+    margin-top: 1.5rem;
+}
+
+.text-btn .btn a{
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    padding: 1rem 3rem;
+
+}
+
+.text-btn a:hover{
+    background: var(--color-dark-blue);
+}
+
+/*------ SIDE BAR ---------*/
+
+.side-bar{
+    padding: 2rem;
+    background-color: var(--color-dark-blue);
+}
+
+.side-bar h3{
+    font-size: 3rem;
+    color: var(--color-orange);
+    margin-bottom: 3rem;
+
+}
+
+/*SIDE BAR LIST*/
+
+.side-bar_list{
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.side-bar_list-item a h4{
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.side-bar_list-item a h4:hover{
+    color: var(--color-orange);
+}
+
+.side-bar_list-item p{
+    color: var(--color-grey);
+    line-height: 1.5;
+}
+
+.side-bar_list-item:nth-child(5){
+    margin-bottom: 1.2rem;
+}
+
+.side-bar_list .line{
+    min-height: .1rem;
+    background: var(--color-grey);
+}
+
 
 
 /*---------FOOTER---------*/
