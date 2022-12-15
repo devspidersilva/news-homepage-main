@@ -2,6 +2,7 @@
     --color-dark-blue: hsl(240, 100%, 5%);
     --color-white: hsl(36, 100%, 99%);
     --color-grey:  hsl(236, 13%, 42%);
+    --color-grey-white:  hsl(236, 25%, 76%);
     --color-red: hsl(5, 85%, 63%);
     --color-orange: hsl(35, 77%, 62%);
 }
@@ -62,7 +63,6 @@ ul li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: relative; */
     margin-bottom: 3rem;
     overflow: inherit;
 }
@@ -97,7 +97,7 @@ ul li{
 
 .menu-list_item a{
     color: var(--color-dark-blue);
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .check-menu:checked~.menu .menu-list-position{
@@ -119,6 +119,7 @@ ul li{
 
 .content-body{
     flex-direction: column;
+    gap: 8rem;
 }
 /*--------- CONTENT MAIN ----------*/
 
@@ -233,14 +234,329 @@ ul li{
     background: var(--color-grey);
 }
 
+/*---------- CONTENT BOTTOM -------------*/
+
+.content-bottom_list{
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.content-bottom_list-item-content{
+    height: 12rem;
+    gap: 2rem;
+}
+
+.cont-bottom_list-item-img{
+    flex: 1 1 30rem;
+    background-position: center ;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img-1{
+    background-image: url("../images/image-retro-pcs.jpg");
+}
+
+.img-2{
+    background-image: url("../images/image-top-laptops.jpg");
+}
+
+.img-3{
+    background-image: url("../images/image-gaming-growth.jpg");
+}
+
+
+.cont-bottom_list-item-text{
+    flex: 1 1 60rem;
+}
+
+.cont-bottom_list-item-text h4{
+    margin-top: -.5rem;
+    font-size: 3.2rem;
+    color: var(--color-grey-white);
+}
+
+.cont-bottom_list-item-text a h5{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-dark-blue);
+    margin-top: .5rem;
+}
+
+.cont-bottom_list-item-text p{
+    margin-top: 2rem;
+    line-height: 1.8;
+    color: var(--color-grey-white);
+}
+
 
 
 /*---------FOOTER---------*/
 .attribution {
-    font-size: 11px;
+    margin-top: 2rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/*------- MEDIA QUERIES -----------*/
+
+@media (min-width: 800px){
+
+    /*----- CONTAINER -----*/
+    .container{
+        padding: 5rem 7rem;
+    }
+    
+    /*----- MENU -----*/
+
+    .menu{
+        margin-bottom: 7rem;
+    }
+
+    .menu-list-position{
+        position: inherit;
+        display: block;
+    }
+    
+    .check-menu_label::after{
+        display: none;
+    }
+
+    .menu-list{
+        flex-direction: row;
+        gap: 6rem;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        position: inherit;
+    }
+
+    /*----- CONTENT MEAIN -----*/
+
+    .principal-section{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .principal-image{
+        grid-column: span 2;
+        background-image: url("../images/image-web-3-desktop.jpg");
+        background-size: cover;
+    }
+
+    .principal-title h2{
+        font-size: 3.8rem;
+        line-height: 5.8rem;
+    }
+
+    .text-btn{
+        gap: 2.5rem;
+    }
+
+    .text-btn p{
+        line-height: 1.75;
+    }
+
+    .text-btn .btn a{
+        padding: 1.5rem 4.3rem;
+        letter-spacing: .5rem;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    /*----- CONTAINER -----*/
+    .container{
+        padding: 7rem 9rem;
+    }
+    
+    /*----- MENU -----*/
+    .menu-list{
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+        justify-content: flex-end;
+        height: inherit;
+        position: inherit;
+    }
+
+    /*----- CONTENT MEAIN -----*/
+    .content-main{
+        flex-direction: row;
+        gap: 3rem;
+        
+    }
+
+    .principal-title h2{
+        font-size: 4.8rem;
+        line-height: 6.5rem;
+    }
+
+    .text-btn p{
+        font-size: 1.7rem;
+        line-height: 1.75;
+    }
+
+    .text-btn .btn a{
+        padding: 1.5rem 4.3rem;
+        letter-spacing: .5rem;
+    }
+
+    /*SIDE BAR*/
+    .side-bar{
+        flex: 1 1 95rem ;
+    }
+    
+    .side-bar_list{
+        gap: 4rem;
+    }
+    
+    /*----- CONTENT BOTTOM -----*/
+    .content-bottom_list{
+        flex-direction: row;
+    }
+
+    .cont-bottom_list-item-text h4{
+
+    }
+}
+
+@media (min-width: 1280px){
+
+    /*----- CONTAINER -----*/
+    .container{
+        padding: 7rem 9rem;
+    }
+    
+    /*----- MENU -----*/
+    .menu-list{
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+        justify-content: flex-end;
+        height: inherit;
+        position: inherit;
+    }
+
+    /*----- CONTENT MEAIN -----*/
+    .content-main{
+        flex-direction: row;
+        gap: 3rem;
+        
+    }
+
+    .principal-title h2{
+        font-size: 4.8rem;
+        line-height: 6.5rem;
+    }
+
+    .text-btn{
+        margin-top: .42rem;
+    }
+
+    .text-btn p{
+        font-size: 1.7rem;
+        line-height: 1.75;
+    }
+
+    .text-btn .btn a{
+        padding: 1.5rem 4.3rem;
+        letter-spacing: .5rem;
+    }
+
+    /*SIDE BAR*/
+    .side-bar{
+        flex: 1 1 100rem ;
+    }
+    
+    .side-bar_list{
+        gap: 4rem;
+    }
+    
+    /*----- CONTENT BOTTOM -----*/
+    .content-bottom_list{
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-around;
+    }
+
+    .content-bottom_list-item{
+        flex: 1 1 33.33%;
+    }
+
+}
+
+@media (min-width: 1366px){
+    .content-bottom_list-item:nth-child(2) p{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1440px){
+
+    /*----- CONTAINER -----*/
+    .container{
+        padding: 10rem 13rem;
+    }
+    
+    /*----- MENU -----*/
+    .menu-list{
+        flex-direction: row;
+        gap: 4.4rem;
+        align-items: center;
+        justify-content: flex-end;
+        height: inherit;
+        position: inherit;
+    }
+
+    /*----- CONTENT MEAIN -----*/
+    .content-main{
+        flex-direction: row;
+        gap: 3rem;
+        
+    }
+
+    .principal-title h2{
+        font-size: 5.8rem;
+        line-height: 6.5rem;
+    }
+
+    .text-btn{
+        margin-top: .42rem;
+    }
+
+    .text-btn p{
+        font-size: 1.7rem;
+        line-height: 1.75;
+    }
+
+    .text-btn .btn a{
+        padding: 1.5rem 4.3rem;
+        letter-spacing: .5rem;
+    }
+
+    /*SIDE BAR*/
+    .side-bar{
+        flex: 1 1 100rem ;
+    }
+    
+    .side-bar_list{
+        gap: 4rem;
+    }
+    
+    /*----- CONTENT BOTTOM -----*/
+    .content-bottom_list{
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-around;
+    }
+
+    .content-bottom_list-item{
+        flex: 1 1 33.33%;
+    }
+
 }
