@@ -416,13 +416,19 @@ ul li{
     }
     
     /*----- CONTENT BOTTOM -----*/
+
+    .content-bottom{
+        min-height: 15rem;
+    }
     .content-bottom_list{
+        min-height: 15rem;
         flex-direction: row;
     }
 
-    .cont-bottom_list-item-text h4{
-
+    .content-bottom_list-item-content{
+        min-height: 15rem;
     }
+
 }
 
 @media (min-width: 1280px){
