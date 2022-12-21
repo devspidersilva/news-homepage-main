@@ -10,6 +10,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -32,7 +33,9 @@ ul li{
 
 /*---------GENERIC CLASSES---------*/
 .container{
+
     padding: 2rem;
+    margin: 0 auto;
 }
 
 .flex{
@@ -99,6 +102,7 @@ ul li{
     color: var(--color-dark-blue);
     font-size: 1.5rem;
 }
+
 
 .check-menu:checked~.menu .menu-list-position{
     display: block;
@@ -252,7 +256,7 @@ ul li{
     flex: 1 1 30rem;
     height: 14rem;
     background-position: center ;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -316,6 +320,7 @@ ul li{
 
     /*----- CONTAINER -----*/
     .container{
+        max-width: 800px;
         padding: 5rem 7rem;
     }
     
@@ -379,6 +384,7 @@ ul li{
 
     /*----- CONTAINER -----*/
     .container{
+        max-width: 1024px;
         padding: 7rem 9rem;
     }
     
@@ -460,6 +466,7 @@ ul li{
 
     /*----- CONTAINER -----*/
     .container{
+        max-width: 1280px;
         padding: 7rem 9rem;
     }
     
@@ -522,6 +529,11 @@ ul li{
 }
 
 @media (min-width: 1366px){
+
+    .container{
+        max-width: 1366px;
+    }
+
     .content-bottom_list-item:nth-child(2) p{
         width: 80%;
     }
@@ -531,6 +543,7 @@ ul li{
 
     /*----- CONTAINER -----*/
     .container{
+        max-width: 1440px;
         padding: 10rem 13rem;
     }
     
