@@ -151,7 +151,7 @@ ul li{
 
 /*PRINCIPAL TITLE*/
 
-.principal-title h2{
+.principal-title h1{
     font-size: 4rem;
     font-weight: 800;
     line-height: 4rem;
@@ -182,6 +182,7 @@ ul li{
     color: var(--color-white);
     background-color: var(--color-red);
     padding: 1rem 3rem;
+    transition: all 300ms ease-in-out;
 
 }
 
@@ -196,7 +197,7 @@ ul li{
     background-color: var(--color-dark-blue);
 }
 
-.side-bar h3{
+.side-bar h2{
     font-size: 3rem;
     color: var(--color-orange);
     margin-bottom: 3rem;
@@ -214,6 +215,7 @@ ul li{
     font-size: 2rem;
     color: var(--color-white);
     margin-bottom: 1rem;
+    transition: all 300ms ease-in-out;
 }
 
 .side-bar_list-item a h4:hover{
@@ -271,17 +273,22 @@ ul li{
     flex: 1 1 60rem;
 }
 
-.cont-bottom_list-item-text h4{
+.cont-bottom_list-item-text h3{
     margin-top: -.5rem;
     font-size: 3.2rem;
     color: var(--color-grey-white);
 }
 
-.cont-bottom_list-item-text a h5{
+.cont-bottom_list-item-text a h4{
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--color-dark-blue);
     margin-top: .5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.cont-bottom_list-item-text a h4:hover{
+    color: var(--color-orange);
 }
 
 .cont-bottom_list-item-text p{
@@ -348,7 +355,7 @@ ul li{
         background-size: cover;
     }
 
-    .principal-title h2{
+    .principal-title h1{
         font-size: 3.8rem;
         line-height: 5.8rem;
     }
@@ -385,6 +392,27 @@ ul li{
         position: inherit;
     }
 
+    .menu-list_item a{
+        display: block;
+        position: relative;
+    }
+
+    .menu-list_item a::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        width: 0;
+        height: 0.3rem;
+        background: var(--color-orange); 
+        transition: all 300ms ease-in-out;
+      }
+      
+      .menu-list_item a:hover::after {
+        width: 50%;
+        left: 25%;
+      }
+
     /*----- CONTENT MEAIN -----*/
     .content-main{
         flex-direction: row;
@@ -392,7 +420,7 @@ ul li{
         
     }
 
-    .principal-title h2{
+    .principal-title h1{
         font-size: 4.8rem;
         line-height: 6.5rem;
     }
@@ -452,7 +480,7 @@ ul li{
         
     }
 
-    .principal-title h2{
+    .principal-title h1{
         font-size: 4.8rem;
         line-height: 6.5rem;
     }
@@ -523,7 +551,7 @@ ul li{
         
     }
 
-    .principal-title h2{
+    .principal-title h1{
         font-size: 5.8rem;
         line-height: 6.5rem;
     }
